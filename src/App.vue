@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <div id="app" class="container-fluid fill-height container-mask">
     <router-view></router-view>
   </div>
 </template>
@@ -12,12 +11,12 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.fill-height{
+  min-height: 100%;
+  height: 100%;
+}
+.container-mask{
+  padding: 0 !important;
+  overflow: hidden;
 }
 </style>
