@@ -1,12 +1,16 @@
 <template>
   <div id="app" class="container-fluid fill-height container-mask">
     <router-view></router-view>
+    <customMenu></customMenu>
   </div>
 </template>
 
 <script>
+import customMenu from '@/components/Menu'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: { customMenu }
 }
 </script>
 
@@ -38,6 +42,14 @@ export default {
          url('./assets/fonts/substract/jaapokki-substract.svg') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+/*TODO: Change the word 'text to 'font'*/
+.regular-text {
+  font-family: 'jaap-regular';
+}
+
+.substracted-text {
+  font-family: 'jaap-substract';
 }
 
 </style>

@@ -1,9 +1,9 @@
 <template lang="html">
   <div class="fill-height home-elements-container bg-pattern bg-transition">
-    <div class="page-title-container">
-      <div class="page-title">
-        <h1 class="text-center home-text t-name">{{nameTitle}}</h1>
-        <h3 class="text-center home-text t-description">{{descriptionTitle}}</h3>
+    <div class="title-container">
+      <div class="title">
+        <h1 class="text-center home-text t-name substracted-text">{{nameTitle}}</h1>
+        <h3 class="text-center home-text t-description regular-text">{{descriptionTitle}}</h3>
       </div>
     </div>
 
@@ -29,11 +29,10 @@
 
   .t-name {
     font-size: 4em;
-    font-family: 'jaap-substract';
   }
 
   .t-description {
-    font-family: 'jaap-regular';
+    font-size: 2em;
   }
 
   .home-elements-container{
