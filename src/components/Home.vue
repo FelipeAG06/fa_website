@@ -2,8 +2,8 @@
   <div class="fill-height home-elements-container bg-pattern bg-transition">
     <div class="page-title-container">
       <div class="page-title">
-        <h1 class="text-center home-text t-name">F E L I P E . A L V A R E Z</h1>
-        <h3 class="text-center home-text t-description">UX designer and Frontend developer</h3>
+        <h1 class="text-center home-text t-name">{{nameTitle}}</h1>
+        <h3 class="text-center home-text t-description">{{descriptionTitle}}</h3>
       </div>
     </div>
 
@@ -12,7 +12,13 @@
 
 <script>
   export default {
-    name: 'Home'
+    name: 'Home',
+    data () {
+      return {
+        nameTitle: 'F E L I P E . A L V A R E Z',
+        descriptionTitle: 'UX designer and Frontend developer'
+      }
+    }
   }
 </script>
 
