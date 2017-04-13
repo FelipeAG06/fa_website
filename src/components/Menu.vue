@@ -7,7 +7,7 @@
       <li class="regular-text">
         <router-link v-bind:to="'/about'">About</router-link>
       </li>
-      <li class="regular-text">Work</li>
+      <!-- <li class="regular-text">Work</li> -->
       <li class="regular-text">Contact</li>
     </ul>
   </div>

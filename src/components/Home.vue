@@ -15,7 +15,7 @@
     name: 'Home',
     data () {
       return {
-        nameTitle: 'F E L I P E . A L V A R E Z',
+        nameTitle: 'F E L I P E   A L V A R E Z',
         descriptionTitle: 'UX designer and Frontend developer'
       }
     }
