@@ -2,17 +2,17 @@
   <nav id="socialLinks">
     <ul>
       <li>
-        <a href="#">
+        <a href="https://github.com/FelipeAG06" target="_blank">
           <i class="mdi mdi-github-face social-link-icon"></i>
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="https://www.behance.net/FelipeAlvarez" target="_blank">
           <i class="mdi mdi-behance social-link-icon"></i>
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/felipe-alvarez-025724ab/" target="_blank">
           <i class="mdi mdi-linkedin social-link-icon"></i>
         </a>
       </li>
