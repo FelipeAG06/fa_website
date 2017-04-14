@@ -26,10 +26,16 @@ export default {
   overflow: hidden;
 }
 
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+/*Text classes*/
 .section-title {
   font-family: 'jaap-regular';
   color: #442CAC;
-  font-size: 9em;
+  font-size: 7em;
 }
 
 .section-regular-text {

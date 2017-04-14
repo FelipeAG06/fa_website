@@ -8,7 +8,9 @@
         <router-link v-bind:to="'/about'">About</router-link>
       </li>
       <!-- <li class="regular-font">Work</li> -->
-      <li class="regular-font">Contact</li>
+      <li class="regular-font">
+        <router-link v-bind:to="'/contact'">Contact</router-link>
+      </li>
     </ul>
   </nav>
 </template>
