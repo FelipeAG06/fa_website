@@ -4,6 +4,9 @@
       <section class="col-sm-12 form-section">
         <h1 class="section-title text-center">{{title}}</h1>
         <section class="container">
+          <p class="section-regular-text text-center">
+             Revolutionary, fun and challenging projects are my favorites. If you have something to talk about please feel free to <span class="section-highlighted-text section-highlighted-italic-text">Get in touch!</span>
+          </p>
           <div class="col-sm-12 col-md-6 col-centered">
             <form>
               <!-- Name -->
@@ -46,11 +49,11 @@
 
 <style lang="css">
 #contactComponent .form-section {
-  height: 70%;
+  height: 80%;
 }
 
 #contactComponent .contact-picture-container {
-  height: 30%;
+  height: 20%;
 }
 
 #contactComponent .form-section .form-section {
