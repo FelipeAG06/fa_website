@@ -2,36 +2,39 @@
   <div class="fill-height home-elements-container bg-pattern bg-transition">
     <div class="title-container">
       <div class="title">
-        <h1 class="text-center home-text t-name substracted-font">{{nameTitle}}</h1>
-        <h3 class="text-center home-text t-description regular-font">{{descriptionTitle}}</h3>
+        <h1 class="text-center home-text-color home-text-name substracted-font">{{nameTitle}}</h1>
+        <h3 class="text-center home-text-color home-text-description regular-font">{{descriptionTitle}}</h3>
       </div>
     </div>
-
+    <socialLinks></socialLinks>
   </div>
 </template>
 
 <script>
+  import socialLinks from '@/components/Social-links'
+
   export default {
     name: 'Home',
     data () {
       return {
-        nameTitle: 'F E L I P E   A L V A R E Z',
+        nameTitle: 'F E L I P E - A L V A R E Z',
         descriptionTitle: 'UX designer and Frontend developer'
       }
-    }
+    },
+    components: { socialLinks }
   }
 </script>
 
 <style lang="css">
-  .home-text {
+  .home-text-color {
     color:#FFF;
   }
 
-  .t-name {
+  .home-text-name {
     font-size: 4em;
   }
 
-  .t-description {
+  .home-text-description {
     font-size: 2em;
   }
 

@@ -1,5 +1,5 @@
 <template lang="html">
-  <div id="custom-menu" class="fill-height">
+  <nav id="customMenu" class="fill-height">
     <ul>
       <li class="regular-font">
         <router-link v-bind:to="'/'">Home</router-link>
@@ -10,7 +10,7 @@
       <!-- <li class="regular-font">Work</li> -->
       <li class="regular-font">Contact</li>
     </ul>
-  </div>
+  </nav>
 </template>
 
 <script>
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="css">
-  #custom-menu {
+  #customMenu {
     position: fixed;
     display: flex;
     align-items: center;
@@ -29,17 +29,17 @@ export default {
     right: 0;
   }
 
-  #custom-menu ul {
+  #customMenu ul {
     list-style: none;
     padding-right: 30px;
   }
-  #custom-menu ul li,a{
+  #customMenu ul li,a{
     height: 50px;
     color: #00FFA3;
     font-size: 20px;
   }
 
-  #custom-menu ul li a:hover{
+  #customMenu ul li a:hover{
     height: 50px;
     color: #CCC;
   }
