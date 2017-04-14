@@ -4,13 +4,19 @@
         <figure class="profile-pic fill-height"></figure>
     </aside>
     <aside class="col-sm-12 col-md-8 description-container fill-height">
-      <h1 class="about-title">{{title}}</h1>
-      <p>I am a UX designer and a front-end developer with +5 years of development
-      experience in different projects and areas from advertising sites to web
-      applications. My commitment to team progress has been recurrently praised
-      throught my different job positions, along with my communication
-      abilities (both spanish and english) and business envisioning for every project.
-      </p>
+      <h1 class="section-title">{{title}}</h1>
+      <div class="row">
+        <div class="col-sm-12 col-md-10">
+          <p class="section-regular-text">I am a <span class="section-highlighted-text">UX designer</span> and a <span class="section-highlighted-text">front-end developer</span> with +5 years of development
+          experience in different projects and areas from advertising sites to web
+          applications. My commitment to team progress has been recurrently praised
+          throught my different job positions, along with my communication
+          abilities <span class="section-highlighted-text section-highlighted-italic-text">(both spanish and english)</span> and business envisioning for every project.
+          </p>
+        </div>
+
+      </div>
+
     </aside>
   </section>
 </template>
@@ -27,10 +33,6 @@ export default {
 </script>
 
 <style lang="css">
-  #aboutComponent .about-title {
-   font-family: 'jaap-regular';
-   font-size: 9em;
-  }
   /*Profile picture*/
   #aboutComponent .profile-pic-container{
    height: 100%;
@@ -48,10 +50,6 @@ export default {
   #aboutComponent .description-container{
    /*background-color: #442CAC;*/
    background-color: #FFF;
-  }
-
-  #aboutComponent .description-container .about-title{
-    color: #442CAC;
   }
 
 </style>

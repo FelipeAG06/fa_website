@@ -1,14 +1,14 @@
 <template lang="html">
   <div id="custom-menu" class="fill-height">
     <ul>
-      <li class="regular-text">
+      <li class="regular-font">
         <router-link v-bind:to="'/'">Home</router-link>
       </li>
-      <li class="regular-text">
+      <li class="regular-font">
         <router-link v-bind:to="'/about'">About</router-link>
       </li>
-      <!-- <li class="regular-text">Work</li> -->
-      <li class="regular-text">Contact</li>
+      <!-- <li class="regular-font">Work</li> -->
+      <li class="regular-font">Contact</li>
     </ul>
   </div>
 </template>

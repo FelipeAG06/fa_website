@@ -2,8 +2,8 @@
   <div class="fill-height home-elements-container bg-pattern bg-transition">
     <div class="title-container">
       <div class="title">
-        <h1 class="text-center home-text t-name substracted-text">{{nameTitle}}</h1>
-        <h3 class="text-center home-text t-description regular-text">{{descriptionTitle}}</h3>
+        <h1 class="text-center home-text t-name substracted-font">{{nameTitle}}</h1>
+        <h3 class="text-center home-text t-description regular-font">{{descriptionTitle}}</h3>
       </div>
     </div>
 

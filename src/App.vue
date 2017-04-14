@@ -15,15 +15,41 @@ export default {
 </script>
 
 <style>
+/*Reusable classes*/
 .fill-height{
   min-height: 100%;
   height: 100%;
 }
-.container-mask{
+
+.container-mask {
   padding: 0 !important;
   overflow: hidden;
 }
 
+.section-title {
+  font-family: 'jaap-regular';
+  color: #442CAC;
+  font-size: 9em;
+}
+
+.section-regular-text {
+  font-family: 'Roboto';
+  font-size: 1.5em;
+}
+
+.section-highlighted-text {
+  font-family: 'Roboto';
+  color: #00FFA3;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.section-highlighted-italic-text {
+  font-family: 'Roboto';
+  font-style: italic;
+}
+
+/*Custom Font faces*/
 @font-face {
     font-family: 'jaap-regular';
     src: url('./assets/fonts/regular/jaapokki-regular.eot'),
@@ -43,12 +69,12 @@ export default {
     font-weight: normal;
     font-style: normal;
 }
-/*TODO: Change the word 'text to 'font'*/
-.regular-text {
+
+.regular-font {
   font-family: 'jaap-regular';
 }
 
-.substracted-text {
+.substracted-font {
   font-family: 'jaap-substract';
 }
 
