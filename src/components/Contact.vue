@@ -5,7 +5,7 @@
         <h1 class="section-title text-center">{{title}}</h1>
         <section class="container">
           <p class="section-regular-text text-center">
-             Revolutionary, fun and challenging projects are my favorites. If you have something to talk about please feel free to <span class="section-highlighted-text section-highlighted-italic-text">Get in touch!</span>
+             Revolutionary, fun and challenging projects are my favorites. If you have something to talk about or share please feel free to <span class="section-highlighted-text section-highlighted-italic-text">Get in touch!</span>
           </p>
           <div class="col-sm-12 col-md-6 col-centered">
             <form>
@@ -31,33 +31,40 @@
       </section>
       <section class="col-sm-12 contact-picture-container">
         <figure class="contact-picture"></figure>
+        <div class="social-links-wrapper">
+          <socialLinks></socialLinks>
+        </div>
       </section>
     </div>
   </section>
 </template>
 
 <script>
+  import socialLinks from '@/components/Social-links'
   export default {
     name:'Contact',
     data() {
       return {
         title: 'C O N T A C T'
       }
-    }
+    },
+    components: { socialLinks }
   }
 </script>
 
 <style lang="css">
+/*Form section*/
 #contactComponent .form-section {
   height: 80%;
 }
 
-#contactComponent .contact-picture-container {
-  height: 20%;
-}
-
 #contactComponent .form-section .form-section {
  padding: 0 100px !important;
+}
+
+/*Picture section*/
+#contactComponent .contact-picture-container {
+  height: 20%;
 }
 
 #contactComponent .contact-picture-container .contact-picture{
