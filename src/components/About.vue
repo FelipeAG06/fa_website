@@ -5,7 +5,7 @@
     </aside>
     <aside class="col-sm-12 col-md-8 description-container fill-height">
       <h1 class="section-title">{{title}}</h1>
-      <div class="row">
+      <div class="row fill-height">
         <div class="col-sm-12 col-md-10">
           <p class="section-regular-text">I am a <span class="section-highlighted-text">UX designer</span> and a <span class="section-highlighted-text">front-end developer</span> with +5 years of development
           experience in different projects and areas from advertising sites to web
@@ -13,8 +13,20 @@
           throught my different job positions, along with my communication
           abilities <span class="section-highlighted-text section-highlighted-italic-text">(both spanish and english)</span> and business envisioning for every project.
           </p>
-        </div>
+          <hr/>
+          <faTabs>
+            <faTabItem name="t1" title="Tab 1" active="true">
+                Hello World
+            </faTabItem>
+            <faTabItem name="t2" title="Tab 2">
+                Hello World 2
+            </faTabItem>
+            <faTabItem name="t3" title="Tab 3">
+                Hello World 3
+            </faTabItem>
+          </faTabs>
 
+        </div>
       </div>
 
     </aside>
@@ -22,13 +34,17 @@
 </template>
 
 <script>
+import faTabs from '@/components/fa-tabs/fa-tabs'
+import faTabItem from '@/components/fa-tabs/fa-tab-item'
+
 export default {
   name: 'About',
   data() {
     return {
       title: 'A B O U T'
     }
-  }
+  },
+  components: { faTabs, faTabItem }
 }
 </script>
 

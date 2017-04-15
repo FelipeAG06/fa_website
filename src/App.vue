@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="css">
 /*Reusable classes*/
 .fill-height{
   min-height: 100%;
@@ -40,7 +40,7 @@ export default {
 
 .section-regular-text {
   font-family: 'Roboto';
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .section-highlighted-text {
