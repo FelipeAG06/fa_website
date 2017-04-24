@@ -13,19 +13,32 @@
           throught my different job positions, along with my communication
           abilities <span class="section-highlighted-text section-highlighted-italic-text">(both spanish and english)</span> and business envisioning for every project.
           </p>
+          <!-- TODO: TEXT FOR ABOUT SHOULD BE MODIFIED -->
           <hr/>
-          <faTabs>
-            <faTabItem name="t1" title="Tab 1" active="true">
-                Hello World
-            </faTabItem>
-            <faTabItem name="t2" title="Tab 2">
-                Hello World 2
-            </faTabItem>
-            <faTabItem name="t3" title="Tab 3">
-                Hello World 3
-            </faTabItem>
-          </faTabs>
+          <div class="col-sm-12">
+            <ul>
+              <li>Some people I worked with</li>
+              <li>Usage of Frontend technologies</li>
+            </ul>
+            <div class="companies-images">
+              <!-- velocity -->
+              <!-- Premera -->
+              <!-- Eafit -->
+              <!-- DDB -->
+              <!-- eHarmony -->
+              <!-- SignalPath -->
 
+            </div>
+            <div class="techs-images">
+              <!-- Angular -->
+              <!-- Vue -->
+              <!-- Sass -->
+              <!-- Gulp -->
+              <!-- Webpack -->
+              <!-- Less -->
+              <!-- Typescript -->
+            </div>
+          </div>
         </div>
       </div>
 
