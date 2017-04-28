@@ -22,8 +22,16 @@
           </p>
           <!-- TODO: TEXT FOR ABOUT SHOULD BE MODIFIED -->
           <div class="row">
-            <faPanel title="companies"></faPanel>
-            <faPanel title="technologies"></faPanel>
+            <faPanel title="companies" type="company">
+              <img src="../assets/img/about/panels/companies/001.png" alt="Velocity Partners" slot="company1">
+              <img src="../assets/img/about/panels/companies/002.png" alt="Eafit" slot="company2">
+              <img src="../assets/img/about/panels/companies/003.png" alt="DDB" slot="company3">
+            </faPanel>
+            <faPanel title="technologies" type="tools">
+              <img src="../assets/img/about/panels/technologies/001.png" alt="NG" slot="tool1">
+              <img src="../assets/img/about/panels/technologies/002.png" alt="Sass" slot="tool2">
+              <img src="../assets/img/about/panels/technologies/003.png" alt="Vue" slot="tool3">
+            </faPanel>
           </div>
         </div>
       </div>

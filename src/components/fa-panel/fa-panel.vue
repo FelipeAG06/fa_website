@@ -4,30 +4,58 @@
       <div class="panel-heading custom-fa-panel-heading">
         <h4 class="panel-title regular-font">{{title}}</h4>
       </div>
-      <div class="panel-body custom-fa-panel-body">
+      <!-- Companies -->
+      <div class="panel-body custom-fa-panel-body" v-if="type === 'company'">
         <ul class="list-inline row">
           <li class="col-sm-4">
-              <img src="../../assets/img/about/panels/companies/001.png" alt="Velocity Partners">
+              <slot name="company1"></slot>
           </li>
           <li class="col-sm-4">
-              <img src="../../assets/img/about/panels/companies/002.png" alt="Eafit">
+              <slot name="company2"></slot>
           </li>
           <li class="col-sm-4">
-              <img src="../../assets/img/about/panels/companies/003.png" alt="DDB">
+              <slot name="company3"></slot>
           </li>
         </ul>
         <ul class="list-inline row hidden">
           <li class="col-sm-4">
-              item 4
+            <slot name="company4"></slot>
           </li>
           <li class="col-sm-4">
-              item 5
+              <slot name="company5"></slot>
           </li>
           <li class="col-sm-4">
-              item 6
+              <slot name="company6"></slot>
           </li>
         </ul>
       </div>
+      <!-- Technologies -->
+      <div class="panel-body custom-fa-panel-body" v-else="type === 'tools'">
+        <ul class="list-inline row">
+          <li class="col-sm-4">
+              <slot name="tool1"></slot>
+          </li>
+          <li class="col-sm-4">
+              <slot name="tool2"></slot>
+          </li>
+          <li class="col-sm-4">
+              <slot name="tool3"></slot>
+          </li>
+        </ul>
+        <ul class="list-inline row hidden">
+          <li class="col-sm-4">
+            <slot name="tool4"></slot>
+          </li>
+          <li class="col-sm-4">
+              <slot name="tool5"></slot>
+          </li>
+          <li class="col-sm-4">
+              <slot name="tool6"></slot>
+          </li>
+        </ul>
+      </div>
+
+
     </div>
   </div>
 </template>
@@ -35,7 +63,16 @@
 <script>
 export default {
   name: 'faPanel',
-  props: ['title'],
+  props: {
+    title:{
+      type: String,
+      required: true
+    },
+    type: {
+      type: String,
+      required: true
+    }
+  },
   methods: {
     uppercaseFilter: function(text) {
       return text.toUppercase();
