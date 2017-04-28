@@ -7,13 +7,13 @@
       <div class="panel-body custom-fa-panel-body">
         <ul class="list-inline row">
           <li class="col-sm-4">
-              item 1
+              <img src="../../assets/img/about/panels/companies/001.png" alt="Velocity Partners">
           </li>
           <li class="col-sm-4">
-              item 2
+              <img src="../../assets/img/about/panels/companies/002.png" alt="Eafit">
           </li>
           <li class="col-sm-4">
-              item 3
+              <img src="../../assets/img/about/panels/companies/003.png" alt="DDB">
           </li>
         </ul>
         <ul class="list-inline row hidden">
