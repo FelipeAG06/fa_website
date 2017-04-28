@@ -4,7 +4,7 @@
         <figure class="profile-pic fill-height"></figure>
     </aside>
     <aside class="col-sm-12 col-md-8 description-container fill-height">
-      <h1 class="section-title">{{title}}</h1>
+      <h1 class="section-title about-title">{{title}}</h1>
       <div class="row fill-height">
         <div class="col-sm-12 col-md-10">
           <p class="section-regular-text">I am a <span class="section-highlighted-text">UX designer</span> and a <span class="section-highlighted-text">front-end developer</span> with +5 years of development
@@ -13,31 +13,17 @@
           throught my different job positions, along with my communication
           abilities <span class="section-highlighted-text section-highlighted-italic-text">(both spanish and english)</span> and business envisioning for every project.
           </p>
+          <p class="section-regular-text">
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet augue massa.
+             Nam sed volutpat urna. Vivamus consequat cursus velit eget dictum. Proin suscipit tincidunt dolor,
+             eget consectetur lectus iaculis sit amet. Sed suscipit et velit condimentum pellentesque.
+             Sed vulputate nisl vitae mauris viverra lobortis. Sed vel nisi nisi. Nunc sodales non lacus vitae hendrerit.
+             Aenean consectetur accumsan lectus vitae blandit. Curabitur tincidunt vestibulum odio quis malesuada.
+          </p>
           <!-- TODO: TEXT FOR ABOUT SHOULD BE MODIFIED -->
-          <hr/>
-          <div class="col-sm-12">
-            <ul>
-              <li>Some people I worked with</li>
-              <li>Usage of Frontend technologies</li>
-            </ul>
-            <div class="companies-images">
-              <!-- velocity -->
-              <!-- Premera -->
-              <!-- Eafit -->
-              <!-- DDB -->
-              <!-- eHarmony -->
-              <!-- SignalPath -->
-
-            </div>
-            <div class="techs-images">
-              <!-- Angular -->
-              <!-- Vue -->
-              <!-- Sass -->
-              <!-- Gulp -->
-              <!-- Webpack -->
-              <!-- Less -->
-              <!-- Typescript -->
-            </div>
+          <div class="row">
+            <faPanel title="companies"></faPanel>
+            <faPanel title="technologies"></faPanel>
           </div>
         </div>
       </div>
@@ -47,8 +33,7 @@
 </template>
 
 <script>
-import faTabs from '@/components/fa-tabs/fa-tabs'
-import faTabItem from '@/components/fa-tabs/fa-tab-item'
+import faPanel from '@/components/fa-panel/fa-panel'
 
 export default {
   name: 'About',
@@ -57,28 +42,31 @@ export default {
       title: 'A B O U T'
     }
   },
-  components: { faTabs, faTabItem }
+  components: { faPanel }
 }
 </script>
 
 <style lang="css">
   /*Profile picture*/
+  #aboutComponent .about-title{
+    text-align: left;
+    padding-left: 50px;
+  }
+
   #aboutComponent .profile-pic-container{
-   height: 100%;
-   background-color: #CCC;
-   padding: 0px;
+    height: 100%;
+    background-color: #CCC;
+    padding: 0px;
   }
 
   #aboutComponent .profile-pic-container .profile-pic{
-   background-image: url('../assets/img/about/profile-temp.png');
-   background-size: cover;
+    background-image: url('../assets/img/about/profile-temp.png');
+    background-size: cover;
   }
-
 
   /*Description container*/
   #aboutComponent .description-container{
-   /*background-color: #442CAC;*/
-   background-color: #FFF;
+    /*background-color: #442CAC;*/
+    background-color: #FFF;
   }
-
 </style>
