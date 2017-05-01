@@ -7,13 +7,13 @@
       <!-- Companies -->
       <div class="panel-body custom-fa-panel-body" v-if="type === 'company'">
         <ul class="list-inline row">
-          <li class="col-sm-4">
+          <li class="col-sm-8 col-md-4">
               <slot name="company1"></slot>
           </li>
-          <li class="col-sm-4">
+          <li class="col-sm-8 col-md-4">
               <slot name="company2"></slot>
           </li>
-          <li class="col-sm-4">
+          <li class="col-sm-8 col-md-4">
               <slot name="company3"></slot>
           </li>
         </ul>

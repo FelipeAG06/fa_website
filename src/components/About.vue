@@ -21,7 +21,7 @@
              Aenean consectetur accumsan lectus vitae blandit. Curabitur tincidunt vestibulum odio quis malesuada.
           </p>
           <!-- TODO: TEXT FOR ABOUT SHOULD BE MODIFIED -->
-          <div class="row">
+          <div class="row panels-container">
             <faPanel title="companies" type="company">
               <img src="../assets/img/about/panels/companies/001.png" alt="Velocity Partners" slot="company1">
               <img src="../assets/img/about/panels/companies/002.png" alt="Eafit" slot="company2">
@@ -59,6 +59,7 @@ export default {
   #aboutComponent .about-title{
     text-align: left;
     padding-left: 50px;
+    padding-bottom: 50px;
   }
 
   #aboutComponent .profile-pic-container{
@@ -76,5 +77,22 @@ export default {
   #aboutComponent .description-container{
     /*background-color: #442CAC;*/
     background-color: #FFF;
+  }
+  /*Description container*/
+  #aboutComponent .panels-container{
+    padding-top: 50px;
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (max-width : 768px) {
+    #aboutComponent .profile-pic-container .profile-pic{
+      height: 300px;
+      background-position: auto center;
+    }
+    #aboutComponent .about-title{
+      text-align: center;
+      font-size: 3.6em;
+      padding: 30px 0 30px 0;
+    }
   }
 </style>

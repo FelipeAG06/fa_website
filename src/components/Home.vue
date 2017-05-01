@@ -1,8 +1,12 @@
 <template lang="html">
-  <div class="fill-height home-elements-container bg-pattern bg-transition">
+  <div id="homeComponent" class="fill-height home-elements-container bg-pattern bg-transition">
     <div class="title-container">
+      <!-- <div class="title">
+        <h1 class="text-center home-text-color home-text-name substracted-font">{{nameTitle}} <span class="hidden-sm hidden-xs"> - </span> <br class="hidden-lg hidden-md">{{lastnameTitle}}</h1>
+        <h3 class="text-center home-text-color home-text-description regular-font">{{descriptionTitle}}</h3>
+      </div> -->
       <div class="title">
-        <h1 class="text-center home-text-color home-text-name substracted-font">{{nameTitle}}</h1>
+        <h1 class="text-center home-text-color home-text-name substracted-font">{{nameTitle}} <span class="hidden-sm hidden-xs"> - </span> <br class="hidden-lg hidden-md">{{lastnameTitle}}</h1>
         <h3 class="text-center home-text-color home-text-description regular-font">{{descriptionTitle}}</h3>
       </div>
     </div>
@@ -17,7 +21,8 @@
     name: 'Home',
     data () {
       return {
-        nameTitle: 'F E L I P E - A L V A R E Z',
+        nameTitle: 'F E L I P E',
+        lastnameTitle:'A L V A R E Z',
         descriptionTitle: 'UX designer and Frontend developer'
       }
     },
@@ -58,5 +63,21 @@
     /*TODO: Pattern must be moved else where since it will be animated*/
     background: url('../assets/img/home/pattern.png') no-repeat, linear-gradient(45deg,  #01359f 0%,#7f24b7 88%,#7f24b7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01359f', endColorstr='#7f24b7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (max-width : 768px) {
+    .home-elements-container{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+    }
+    .home-text-name {
+      font-size: 3em;
+    }
+
+    .home-text-description {
+      font-size: 1.3em;
+    }
   }
 </style>

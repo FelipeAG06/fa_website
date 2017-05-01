@@ -15,12 +15,6 @@ export default {
 </script>
 
 <style lang="css">
-/*Reusable classes*/
-.fill-height{
-  min-height: 100%;
-  height: 100%;
-}
-
 .container-mask {
   padding: 0 !important;
   overflow: hidden;
@@ -83,5 +77,21 @@ export default {
 .substracted-font {
   font-family: 'jaap-substract';
 }
+
+/*Reusable classes*/
+.fill-height{
+  min-height: 100%;
+  height: 100%;
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .fill-height{
+    min-height: 100%;
+    height: auto;
+  }
+}
+
 
 </style>
