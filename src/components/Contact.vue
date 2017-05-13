@@ -1,5 +1,6 @@
 <template lang="html">
   <section id="contactComponent" class="fill-height">
+    <mobileNav></mobileNav>
     <div class="row fill-height">
       <section class="col-sm-12 form-section">
         <h1 class="section-title text-center">{{title}}</h1>
@@ -41,6 +42,8 @@
 
 <script>
   import socialLinks from '@/components/Social-links'
+  import mobileNav from '@/components/fa-mobile-nav/fa-mobile-nav'
+
   export default {
     name:'Contact',
     data() {
@@ -48,7 +51,7 @@
         title: 'C O N T A C T'
       }
     },
-    components: { socialLinks }
+    components: { socialLinks, mobileNav }
   }
 </script>
 

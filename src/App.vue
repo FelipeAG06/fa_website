@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container-fluid fill-height container-mask">
     <router-view></router-view>
-    <customMenu></customMenu>
+    <customMenu class="hidden-sm hidden-xs"></customMenu>
   </div>
 </template>
 

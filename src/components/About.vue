@@ -1,5 +1,6 @@
 <template lang="html">
   <section id="aboutComponent" class="fill-height">
+    <mobileNav></mobileNav>
     <aside class="col-sm-12 col-md-4 profile-pic-container fill-height">
         <figure class="profile-pic fill-height"></figure>
     </aside>
@@ -42,6 +43,7 @@
 
 <script>
 import faPanel from '@/components/fa-panel/fa-panel'
+import mobileNav from '@/components/fa-mobile-nav/fa-mobile-nav'
 
 export default {
   name: 'About',
@@ -50,7 +52,7 @@ export default {
       title: 'A B O U T'
     }
   },
-  components: { faPanel }
+  components: { faPanel, mobileNav }
 }
 </script>
 

@@ -1,5 +1,6 @@
 <template lang="html">
   <div id="homeComponent" class="fill-height home-elements-container bg-pattern bg-transition">
+    <mobileNav></mobileNav>
     <div class="title-container">
       <!-- <div class="title">
         <h1 class="text-center home-text-color home-text-name substracted-font">{{nameTitle}} <span class="hidden-sm hidden-xs"> - </span> <br class="hidden-lg hidden-md">{{lastnameTitle}}</h1>
@@ -16,6 +17,7 @@
 
 <script>
   import socialLinks from '@/components/Social-links'
+  import mobileNav from '@/components/fa-mobile-nav/fa-mobile-nav'
 
   export default {
     name: 'Home',
@@ -26,7 +28,7 @@
         descriptionTitle: 'UX designer and Frontend developer'
       }
     },
-    components: { socialLinks }
+    components: { socialLinks, mobileNav }
   }
 </script>
 
