@@ -82,6 +82,10 @@
     font-size: 3.6em;
   }
 
+  #contactComponent .form-section {
+    padding-top: 80px;
+  }
+
   /*Picture section*/
   #contactComponent .contact-picture-container {
     height: 250px;
