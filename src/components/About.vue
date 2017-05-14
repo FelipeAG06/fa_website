@@ -23,16 +23,8 @@
           </p>
           <!-- TODO: TEXT FOR ABOUT SHOULD BE MODIFIED -->
           <div class="row panels-container">
-            <faPanel title="companies" type="company">
-              <img src="../assets/img/about/panels/companies/001.png" alt="Velocity Partners" slot="company1">
-              <img src="../assets/img/about/panels/companies/002.png" alt="Eafit" slot="company2">
-              <img src="../assets/img/about/panels/companies/003.png" alt="DDB" slot="company3">
-            </faPanel>
-            <faPanel title="technologies" type="tools">
-              <img src="../assets/img/about/panels/technologies/001.png" alt="NG" slot="tool1">
-              <img src="../assets/img/about/panels/technologies/002.png" alt="Sass" slot="tool2">
-              <img src="../assets/img/about/panels/technologies/003.png" alt="Vue" slot="tool3">
-            </faPanel>
+            <faPanel title="companies" v-bind:elements="panelData.companies"></faPanel>
+            <faPanel title="technologies" v-bind:elements="panelData.tools"></faPanel>
           </div>
         </div>
       </div>
@@ -49,7 +41,19 @@ export default {
   name: 'About',
   data() {
     return {
-      title: 'A B O U T'
+      title: 'A B O U T',
+      panelData: {
+        companies: [
+          { name : 'Velocity Partners', src: 'company-001.png'},
+          { name : 'Eafit', src: 'company-002.png'},
+          { name : 'DDB', src: 'company-003.png'},
+          { name : 'eHarmony', src: 'company-004.png'},
+          { name : 'SignalPath', src: 'company-005.png'}
+        ],
+        tools: [
+          { name : 'NG', src: 'tech-001.png'}
+        ]
+      }
     }
   },
   components: { faPanel, mobileNav }
