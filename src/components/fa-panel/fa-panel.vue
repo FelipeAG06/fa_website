@@ -6,8 +6,8 @@
       </div>
       <!-- Panels -->
       <div class="panel-body custom-fa-panel-body">
-        <ul class="list-inline row">
-          <li v-for="element in elements" class="col-sm-8 col-md-4">
+        <ul>
+          <li v-for="element in elements" class="custom-fa-panel-items">
               <img v-bind:src="urlParse(element.src)" v-bind:alt="element.name">
           </li>
         </ul>
@@ -59,5 +59,20 @@ export default {
 }
 #faPanel .custom-fa-panel .custom-fa-panel-body {
   background-color: #f7f7f7;
+}
+
+#faPanel .custom-fa-panel .custom-fa-panel-body ul{
+  width: inherit;
+  height: 100%;
+  display: inline-block;
+  padding: 0;
+  list-style: none;
+}
+
+#faPanel .custom-fa-panel .custom-fa-panel-items{
+  width: 33%;
+  height: auto;
+  float: left;
+  padding: 15px;
 }
 </style>
