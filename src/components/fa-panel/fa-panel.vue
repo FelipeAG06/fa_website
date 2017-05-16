@@ -6,9 +6,9 @@
       </div>
       <!-- Panels -->
       <div class="panel-body custom-fa-panel-body">
-        <ul>
-          <li v-for="element in elements" class="custom-fa-panel-items">
-              <img v-bind:src="urlParse(element.src)" v-bind:alt="element.name">
+        <ul v-for="pageItems in pages">
+          <li v-for="item in pageItems" class="custom-fa-panel-items">
+              <img v-bind:src="urlParse(item.src)" v-bind:alt="item.name">
           </li>
         </ul>
       </div>
@@ -31,12 +31,25 @@ export default {
       required:true
     }
   },
+  data() {
+    return {
+        pages: null
+    }
+  },
+  created() {
+    this.setPages();
+  },
   methods: {
     uppercaseFilter: function(text) {
       return text.toUppercase();
     },
     urlParse: function(path) {
       return images('./' + path)
+    },
+    setPages: function() {
+      if(this.elements.length > 3) {
+        this.pages = _.chunk(this.elements, 3);
+      }
     }
   }
 }
@@ -67,6 +80,10 @@ export default {
   display: inline-block;
   padding: 0;
   list-style: none;
+}
+
+#faPanel .custom-fa-panel .custom-fa-panel-body ul:nth-child(2){
+  display: none;
 }
 
 #faPanel .custom-fa-panel .custom-fa-panel-items{
