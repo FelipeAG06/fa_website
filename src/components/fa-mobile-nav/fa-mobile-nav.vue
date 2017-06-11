@@ -62,7 +62,6 @@ export default {
 <style lang="css">
   #mobileNav.mobile-nav-container {
     width: 100%;
-    height: 100%;
     position: fixed;
     top: 0;
     padding-top: 15px;
@@ -94,8 +93,6 @@ export default {
   /*Pop up Menu*/
 
   #mobileNav .mobile-popup-container {
-    min-height: 100%;
-    height: 100%;
     position: fixed;
     width: 100%;
     top: 0;
@@ -125,10 +122,12 @@ export default {
   }
 
   .menu-closed > .mobile-popup-container{
+    height: 0;
     display: none;
   }
 
   .menu-opened {
+      height: 100%;
       background: rgba(1, 1, 1, 0.8) !important;
   }
 

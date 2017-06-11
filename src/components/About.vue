@@ -51,7 +51,14 @@ export default {
           { name : 'SignalPath', src: 'company-005.png'}
         ],
         tools: [
-          { name : 'NG', src: 'tech-001.png'}
+          { name : 'NG', src: 'tech-001.png'},
+          { name : 'Sass', src: 'tech-002.png'},
+          { name : 'vue', src: 'tech-003.png'},
+          { name : 'stylus', src: 'tech-004.png'},
+          { name : 'bootstrap', src: 'tech-005.png'},
+          { name : 'gulp', src: 'tech-006.png'},
+          { name : 'webpack', src: 'tech-007.png'},
+          { name : 'typescript', src: 'tech-008.png'}
         ]
       }
     }
