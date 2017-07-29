@@ -4,7 +4,7 @@
     <aside class="col-sm-12 col-md-4 profile-pic-container fill-height">
         <figure class="profile-pic fill-height"></figure>
     </aside>
-    <aside class="col-sm-12 col-md-8 description-container fill-height">
+    <aside class="col-sm-12 col-md-8 description-container fill-height scroll-content">
       <h1 class="section-title about-title">{{title}}</h1>
       <div class="row fill-height">
         <div class="col-sm-12 col-md-10">

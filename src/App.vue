@@ -49,6 +49,10 @@ export default {
   font-style: italic;
 }
 
+.scroll-content {
+  overflow-y: scroll;
+}
+
 /*Custom Font faces*/
 @font-face {
     font-family: 'jaap-regular';

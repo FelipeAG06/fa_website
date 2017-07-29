@@ -2,10 +2,6 @@
   <div id="homeComponent" class="fill-height home-elements-container bg-pattern bg-transition">
     <mobileNav></mobileNav>
     <div class="title-container">
-      <!-- <div class="title">
-        <h1 class="text-center home-text-color home-text-name substracted-font">{{nameTitle}} <span class="hidden-sm hidden-xs"> - </span> <br class="hidden-lg hidden-md">{{lastnameTitle}}</h1>
-        <h3 class="text-center home-text-color home-text-description regular-font">{{descriptionTitle}}</h3>
-      </div> -->
       <div class="title">
         <h1 class="text-center home-text-color home-text-name substracted-font">{{nameTitle}} <span class="hidden-sm hidden-xs"> - </span> <br class="hidden-lg hidden-md">{{lastnameTitle}}</h1>
         <h3 class="text-center home-text-color home-text-description regular-font">{{descriptionTitle}}</h3>
@@ -63,7 +59,7 @@
     background: -moz-linear-gradient(45deg,  #01359f 0%, #7f24b7 88%, #7f24b7 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(45deg,  #01359f 0%,#7f24b7 88%,#7f24b7 100%); /* Chrome10-25,Safari5.1-6 */
     /*TODO: Pattern must be moved else where since it will be animated*/
-    background: url('../assets/img/home/pattern.png') no-repeat, linear-gradient(45deg,  #01359f 0%,#7f24b7 88%,#7f24b7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /* background: url('../assets/img/home/pattern.png') no-repeat, linear-gradient(45deg,  #01359f 0%,#7f24b7 88%,#7f24b7 100%);  W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+  */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01359f', endColorstr='#7f24b7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   }
 
