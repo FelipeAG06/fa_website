@@ -1,6 +1,7 @@
 <template lang="html">
   <div id="homeComponent" class="fill-height home-elements-container bg-pattern bg-transition">
     <mobileNav></mobileNav>
+    
     <div class="title-container">
       <div class="title">
         <h1 class="text-center home-text-color home-text-name substracted-font">{{nameTitle}} <span class="hidden-sm hidden-xs"> - </span> <br class="hidden-lg hidden-md">{{lastnameTitle}}</h1>
@@ -8,12 +9,14 @@
       </div>
     </div>
     <socialLinks></socialLinks>
+    <customPattern></customPattern>
   </div>
 </template>
 
 <script>
   import socialLinks from '@/components/Social-links'
   import mobileNav from '@/components/fa-mobile-nav/fa-mobile-nav'
+  import customPattern from '@/components/fa-pattern/fa-pattern'
 
   export default {
     name: 'Home',
@@ -24,13 +27,17 @@
         descriptionTitle: 'UX designer and Frontend developer'
       }
     },
-    components: { socialLinks, mobileNav }
+    components: { socialLinks, mobileNav, customPattern }
   }
 </script>
 
 <style lang="css">
   .home-text-color {
     color:#FFF;
+  }
+  
+  .title-container {
+    z-index: 997;
   }
 
   .home-text-name {

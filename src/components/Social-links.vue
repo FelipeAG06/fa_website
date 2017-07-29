@@ -32,6 +32,7 @@
     height: 50px;
     position: fixed;
     bottom: 0;
+    z-index: 998;
   }
 
   #socialLinks ul {

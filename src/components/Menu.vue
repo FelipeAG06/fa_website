@@ -29,6 +29,7 @@ export default {
     align-items: center;
     top: 0;
     right: 0;
+    z-index: 999;
   }
 
   #customMenu ul {

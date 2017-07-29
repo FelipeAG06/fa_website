@@ -25,7 +25,7 @@
 </template>
 
 <script>
-var images = require.context('@/assets/img/about/panels', false,  /\.png$/)
+var images = require.context('@/assets/img/about/panels', false,  /\.png$/);
 export default {
   name: 'faPanel',
   props: {
@@ -51,7 +51,7 @@ export default {
       return text.toUppercase();
     },
     urlParse: function(path) {
-      return images('./' + path)
+      return images('./' + path);
     },
     setupPages: function() {
       if(this.elements.length > 3) {
