@@ -30,7 +30,6 @@
             this.loadSVG(this.urlParse('4.svg')),
             this.loadSVG(this.urlParse('5.svg')),
             this.loadSVG(this.urlParse('6.svg')),
-            // this.loadSVG(this.urlParse('7.svg')),
             this.loadSVG(this.urlParse('8.svg')),
             this.loadSVG(this.urlParse('9.svg')),
             this.loadSVG(this.urlParse('10.svg')),
@@ -45,20 +44,40 @@
          
         },
         iconsDisplay: function(results) {
-          var s = Snap('#patternContainer');
-          var g = s.group();
-          var xAxis = 2;
-          for(var i = 0; i < results.length; i++) {
-            // icon.select(icon);
-            var icon = results[i];
-            g.append(icon);
-            g.select('#' + icon.node.id).attr({
-              width: 50,
-              x: xAxis++ * 100,  
-              y: 20
-            });
-          }
+          let ITEMS_NUMBER = 40;
+          let patternWidth = this.screenWidth - 140;
+          let patternHeight = this.screenHeight;
+          let pattern = [];
+
+          let s = Snap('#patternContainer');
+          let pastPos = 0;
           
+          for (let i = 0; i < results.length; i++) {
+            let itemXPos = _.random(0, patternWidth);
+            let itemYPos = _.random(0, patternHeight);
+            let randomIdx = _.random(0, 11);
+            let randomWidth = _.random(20, 30);
+            let icon = results[randomIdx];
+            // pastPost = itemXPos;
+
+            pattern.push({
+              width: randomWidth,
+              icon: icon,
+              x: itemXPos,
+              y: -itemYPos
+            });
+          };
+
+          _.each(pattern, (item) => {
+              s.append(item.icon);
+              s.select('#' + item.icon.node.id).attr({
+                width: item.width,
+                x: item.x,  
+                y: item.y
+              });
+          })
+
+
         },
         loadSVG: function(url) {
           return new Promise(function(resolve, reject) {
