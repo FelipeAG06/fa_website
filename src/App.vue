@@ -35,6 +35,8 @@ export default {
 .section-regular-text {
   font-family: 'Roboto';
   font-size: 1.2em;
+  font-weight: 100;
+  color: #777;
 }
 
 .section-highlighted-text {
