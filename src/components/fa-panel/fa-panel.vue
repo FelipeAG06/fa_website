@@ -153,20 +153,20 @@ export default {
   background-color: #f7f7f7;
   height: 25px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 #faPanel[data*=technologies] .custom-fa-panel .slide-buttons-container {
   background-color: #f7f7f7;
   height: 25px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 #faPanel[data*=companies] .custom-fa-panel .slide-buttons .fa-panel-button{
     width: 15px;
     height: 15px;
-    background-color: #00fea3;
+    background-color: #ccc;
     border-radius: 100%;
     display: inline-block;
     margin: 0 10px;
@@ -175,7 +175,7 @@ export default {
 #faPanel[data*=technologies] .custom-fa-panel .slide-buttons .fa-panel-button{
     width: 15px;
     height: 15px;
-    background-color: rgba(0,254,163, 1);
+    background-color: #ccc;
     border-radius: 100%;
     display: inline-block;
     margin: 0 10px;
@@ -194,12 +194,12 @@ export default {
 }
 
 #faPanel[data*="technologies"] .custom-fa-panel .slide-buttons-container .selected-panel-button{
-  background-color: #442CAC;
+  background-color: #00fea3;
   cursor: pointer;
 }
 
 #faPanel[data*="companies"] .custom-fa-panel .slide-buttons-container .selected-panel-button{
-  background-color: #442CAC;
+  background-color: #00fea3;
   cursor: pointer;
 }
 
