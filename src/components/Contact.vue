@@ -132,13 +132,13 @@
   }
 
   #contactComponent .fa-contact-container .fa-contact-button {
-  background: #442CAC;
-  color: white;
-  border-radius: 0;
-  width: 100%;
-  font-family: 'Roboto';
-  opacity: 1;
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    background: #442CAC;
+    color: white;
+    border-radius: 0;
+    width: 100%;
+    font-family: 'Roboto';
+    opacity: 1;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
   #contactComponent .form-section {

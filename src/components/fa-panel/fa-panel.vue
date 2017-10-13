@@ -206,8 +206,4 @@ export default {
 #faPanel .pagination-btn-container .btn-elem{
   display: inline-block;
 }
-
-/* #faPanel .custom-fa-panel .custom-fa-panel-items{
-  
-} */
 </style>
