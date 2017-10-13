@@ -151,21 +151,21 @@ export default {
 
 #faPanel[data*=companies] .custom-fa-panel .slide-buttons-container {
   background-color: #f7f7f7;
-  height: 37px;
+  height: 25px;
   display: flex;
   justify-content: flex-end;
 }
 
 #faPanel[data*=technologies] .custom-fa-panel .slide-buttons-container {
   background-color: #f7f7f7;
-  height: 37px;
+  height: 25px;
   display: flex;
   justify-content: flex-end;
 }
 
 #faPanel[data*=companies] .custom-fa-panel .slide-buttons .fa-panel-button{
-    width: 19px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background-color: #00fea3;
     border-radius: 100%;
     display: inline-block;
@@ -173,8 +173,8 @@ export default {
 }
 
 #faPanel[data*=technologies] .custom-fa-panel .slide-buttons .fa-panel-button{
-    width: 19px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background-color: rgba(0,254,163, 1);
     border-radius: 100%;
     display: inline-block;
@@ -205,10 +205,5 @@ export default {
 
 #faPanel .pagination-btn-container .btn-elem{
   display: inline-block;
-}
-
-#faPanel .custom-fa-panel .custom-fa-panel-items{
-  flex-grow: 1;
-  flex-basis: 100px;
 }
 </style>
