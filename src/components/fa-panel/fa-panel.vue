@@ -6,17 +6,21 @@
       </div>
       <!-- Panels -->
       <div class="panel-body custom-fa-panel-body">
-        <ul v-for="(pageItems, index) in pages" v-bind:class="{'current-page': index == 0 }">
+        <ul class="page-items-container"
+            v-for="(pageItems, index) in pages" 
+            v-bind:class="{'current-page': index == 0 }">
           <li v-for="item in pageItems" class="custom-fa-panel-items">
               <img v-bind:src="urlParse(item.src)" v-bind:alt="item.name">
           </li>
         </ul>
       </div>
       <div class="slide-buttons-container">
-        <div class="pull-right slide-buttons">
-          <a class="col-sm-2 col-md-4 btn-elem" v-for="(page, index) in pages" v-on:click="goToPage(index)">
-            <i class="mdi mdi-icon mdi-circle"></i>
-          </a>
+        <div class="slide-buttons">
+          <a class="btn-elem fa-panel-button"
+             v-bind:id="title +'-'+ index"
+             v-bind:class="{'selected-panel-button': index === 0}"
+             v-for="(page, index) in pages"
+             v-on:click="goToPage(index)"></a>
         </div>
       </div>
     </div>
@@ -63,17 +67,19 @@ export default {
       const CURRENT_PAGE_CLASS = 'current-page';
       let page = $("#faPanel[data='"+ this.title + "'] .custom-fa-panel-body ul");
       let buttons = $("#faPanel[data='"+ this.title + "'] .slide-buttons-container .slide-buttons a");
-      console.log(page);
+      let selectedItem = $('#' + this.title + '-' + idx);
+
+      //Set new Page
       page
         .eq(idx)
         .addClass(CURRENT_PAGE_CLASS)
         .siblings()
         .removeClass(CURRENT_PAGE_CLASS);
-
-      buttons
-        .eq(idx)
-        .find('a')
-        .focus();
+      
+      selectedItem
+        .addClass('selected-panel-button')
+        .siblings()
+        .removeClass('selected-panel-button');
     }
   }
 }
@@ -84,6 +90,7 @@ export default {
 #faPanel .custom-fa-panel {
   border: none;
 }
+
 .panel-title{
   text-transform: uppercase;
   color: #442CAC;
@@ -91,11 +98,18 @@ export default {
   font-size: 1.2em;
   text-align: center;
 }
+
 #faPanel .custom-fa-panel .custom-fa-panel-heading {
   background-color: #00fea3;
 }
+
 #faPanel .custom-fa-panel .custom-fa-panel-body {
   background-color: #f7f7f7;
+}
+
+#faPanel .custom-fa-panel .custom-fa-panel-body .page-items-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 #faPanel[data*=companies] .custom-fa-panel .custom-fa-panel-body ul{
@@ -112,7 +126,8 @@ export default {
 #faPanel[data*=technologies] .custom-fa-panel .custom-fa-panel-body ul{
   width: inherit;
   height: 100%;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   padding: 0;
   list-style: none;
   opacity: 0;
@@ -121,13 +136,15 @@ export default {
 }
 
 #faPanel[data*=companies] .custom-fa-panel .custom-fa-panel-body ul.current-page {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   opacity: 1;
   transition: all 2s ease-in;
 }
 
 #faPanel[data*=technologies] .custom-fa-panel .custom-fa-panel-body ul.current-page {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   opacity: 1;
   transition: all 2s ease-in;
 }
@@ -135,20 +152,54 @@ export default {
 #faPanel[data*=companies] .custom-fa-panel .slide-buttons-container {
   background-color: #f7f7f7;
   height: 37px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 #faPanel[data*=technologies] .custom-fa-panel .slide-buttons-container {
   background-color: #f7f7f7;
   height: 37px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-#faPanel[data*="companies"] .custom-fa-panel .slide-buttons-container a:focus , a:hover{
-  color:#442CAC;
+#faPanel[data*=companies] .custom-fa-panel .slide-buttons .fa-panel-button{
+    width: 19px;
+    height: 20px;
+    background-color: #00fea3;
+    border-radius: 100%;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#faPanel[data*=technologies] .custom-fa-panel .slide-buttons .fa-panel-button{
+    width: 19px;
+    height: 20px;
+    background-color: rgba(0,254,163, 1);
+    border-radius: 100%;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#faPanel[data*="companies"] .custom-fa-panel .slide-buttons-container a:hover{
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+#faPanel[data*="technologies"] .custom-fa-panel .slide-buttons-container a:hover{
+  cursor: pointer;
+  box-shadow: 0 6px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+#faPanel[data*="technologies"] .custom-fa-panel .slide-buttons-container .selected-panel-button{
+  background-color: #442CAC;
   cursor: pointer;
 }
 
-#faPanel[data*="technologies"] .custom-fa-panel .slide-buttons-container a:focus , a:hover{
-  color:#442CAC;
+#faPanel[data*="companies"] .custom-fa-panel .slide-buttons-container .selected-panel-button{
+  background-color: #442CAC;
   cursor: pointer;
 }
 
@@ -157,9 +208,7 @@ export default {
 }
 
 #faPanel .custom-fa-panel .custom-fa-panel-items{
-  width: 33%;
-  height: auto;
-  float: left;
-  padding: 15px;
+  flex-grow: 1;
+  flex-basis: 100px;
 }
 </style>
