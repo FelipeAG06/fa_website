@@ -9,7 +9,7 @@
       </div>
     </div>
     <socialLinks></socialLinks>
-    <!-- <customPattern></customPattern> -->
+    <customPattern></customPattern>
     <customMenu class="hidden-sm hidden-xs"></customMenu>
   </div>
 </template>
