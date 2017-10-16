@@ -60,8 +60,8 @@
 
   .cls-1{
     fill:#00ffa3;
-    -webkit-animation: rotate 60s linear 0s infinite normal ;
-    animation: rotate 60s linear 0s infinite normal ;
+    -webkit-animation: rotate 40s linear 0s infinite normal ;
+    animation: rotate 40s linear 0s infinite normal ;
   }
 
   @-webkit-keyframes rotate {
@@ -72,7 +72,36 @@
     }
   }
   @keyframes rotate {
+    0% {
+      transform-origin: center center;
+      transform: rotate(60deg);
+      opacity: 0;
+    }
+
+    10%{
+      opacity: 1;
+    }
+
+    50% {
+      transform-origin: center center;
+      transform: rotate(160deg);
+      opacity: 1;
+    }
+
+    80% {
+      transform-origin: center center;
+      transform: rotate(260deg);
+      opacity: 1;
+    }
+
+    90% {
+      transform-origin: center center;
+      transform: rotate(300deg);
+      opacity: 1;
+    }
+    
     100%{
+      opacity: 0;
       transform-origin: center center;
       transform: rotate(360deg);
     }
