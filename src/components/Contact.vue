@@ -12,18 +12,18 @@
             <form action="https://formspree.io/felipeag06@gmail.com" method="POST">
               <!-- Name -->
               <div class="form-group">
-                <label for="exampleInputEmail1" class="fa-form-label">Name</label>
-                <input type="name" name="user_name" class="fa-form-control" aria-describedby="emailHelp" placeholder="Your name" required>
+                <label for="nameField" class="fa-form-label">Name</label>
+                <input id="nameField" type="name" name="user_name" class="fa-form-control" aria-describedby="emailHelp" placeholder="Your name" required>
               </div>
               <!-- Subject -->
               <div class="form-group">
-                <label class="fa-form-label">Subject</label>
-                <input type="subject" name="subject" class="fa-form-control" aria-describedby="e mailHelp" placeholder="Subject" required>
+                <label for="subjectField" class="fa-form-label">Subject</label>
+                <input id="subjectField" type="subject" name="subject" class="fa-form-control" aria-describedby="e mailHelp" placeholder="Subject" required>
               </div>
               <!-- Message -->
               <div class="form-group">
-                <label for="exampleInputEmail1" class="fa-form-label">Message</label>
-                <textarea name="message" class="fa-form-control" rows="3" cols="80" placeholder="Your message" required></textarea>
+                <label for="messageField" class="fa-form-label">Message</label>
+                <textarea id="messageField" name="message" class="fa-form-control" rows="3" cols="80" placeholder="Your message" required></textarea>
               </div>
               <div class="fa-contact-container">
                 <input type="submit" class="btn fa-contact-button" value="S E N D"/>
@@ -39,12 +39,14 @@
         </div>
       </section>
     </div>
+    <customMenu class="hidden-sm hidden-xs"></customMenu>
   </section>
 </template>
 
 <script>
   import socialLinks from '@/components/Social-links'
   import mobileNav from '@/components/fa-mobile-nav/fa-mobile-nav'
+  import customMenu from '@/components/Menu'
 
   export default {
     name:'Contact',
@@ -53,7 +55,7 @@
         title: 'C O N T A C T'
       }
     },
-    components: { socialLinks, mobileNav }
+    components: { socialLinks, mobileNav, customMenu }
   }
 </script>
 
@@ -74,7 +76,7 @@
 
 #contactComponent .fa-form-label {
   font-family: 'Roboto';
-  color: #777;
+  color: #442CAC;
 }
 
 #contactComponent .fa-contact-container {

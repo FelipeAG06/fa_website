@@ -9,7 +9,8 @@
       </div>
     </div>
     <socialLinks></socialLinks>
-    <customPattern></customPattern>
+    <!-- <customPattern></customPattern> -->
+    <customMenu class="hidden-sm hidden-xs"></customMenu>
   </div>
 </template>
 
@@ -17,6 +18,7 @@
   import socialLinks from '@/components/Social-links'
   import mobileNav from '@/components/fa-mobile-nav/fa-mobile-nav'
   import customPattern from '@/components/fa-pattern/fa-pattern'
+  import customMenu from '@/components/Menu'
 
   export default {
     name: 'Home',
@@ -24,10 +26,10 @@
       return {
         nameTitle: 'F E L I P E',
         lastnameTitle:'A L V A R E Z',
-        descriptionTitle: 'UX designer and Frontend developer'
+        descriptionTitle: 'Frontend developer and Design enthusiast'
       }
     },
-    components: { socialLinks, mobileNav, customPattern }
+    components: { socialLinks, mobileNav, customPattern, customMenu }
   }
 </script>
 

@@ -1,16 +1,13 @@
 <template>
   <div id="app" class="container-fluid fill-height container-mask">
     <router-view></router-view>
-    <customMenu class="hidden-sm hidden-xs"></customMenu>
   </div>
 </template>
 
 <script>
-import customMenu from '@/components/Menu'
 
 export default {
-  name: 'app',
-  components: { customMenu }
+  name: 'app'
 }
 </script>
 
@@ -41,7 +38,7 @@ export default {
 
 .section-highlighted-text {
   font-family: 'Roboto';
-  color: #00FFA3;
+  color: #442CAC;
   font-weight: bold;
   font-size: 1em;
 }
