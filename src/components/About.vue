@@ -30,12 +30,14 @@
       </div>
 
     </aside>
+    <customMenu class="hidden-sm hidden-xs"></customMenu>
   </section>
 </template>
 
 <script>
 import faPanel from '@/components/fa-panel/fa-panel'
 import mobileNav from '@/components/fa-mobile-nav/fa-mobile-nav'
+import customMenu from '@/components/Menu'
 
 export default {
   name: 'About',
@@ -63,7 +65,7 @@ export default {
       }
     }
   },
-  components: { faPanel, mobileNav }
+  components: { faPanel, mobileNav, customMenu }
 }
 </script>
 

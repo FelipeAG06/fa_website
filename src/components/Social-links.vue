@@ -55,13 +55,25 @@
     display: inline-block;
   }
 
-  .social-link-icon {
-    font-size: 1em;
-    color: #01359f;
+  #socialLinks ul li a .social-link-icon {
+    font-size: 1.5em;
+    color: #442CAC;
     width: inherit;
     height: inherit;
     display: inline-block;
     text-align: center;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   }
-
+  
+  #socialLinks ul li a:hover .social-link-icon {
+    font-size: 1.5em;
+    color: #442CAC;
+    width: inherit;
+    height: inherit;
+    display: inline-block;
+    text-align: center;
+    transform: rotate(-20deg);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  
 </style>
