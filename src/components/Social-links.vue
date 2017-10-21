@@ -22,7 +22,11 @@
 
 <script>
   export default {
-    name:'socialLinks'
+    name:'socialLinks',
+    mounted() {
+      let socialNav = $('#socialLinks');
+      TweenMax.fromTo(socialNav, 1, {opacity:0, y: 30}, {opacity:1, y: 0, delay:0.2});
+    }
   }
 </script>
 

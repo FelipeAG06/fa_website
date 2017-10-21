@@ -65,6 +65,15 @@ export default {
       }
     }
   },
+  mounted() {
+    let picture = $('.profile-pic-container');
+    let title = $('.section-title');
+    let paragraph = $('.section-regular-text');
+
+    TweenMax.fromTo(picture, 1, {opacity:0, x: -70}, {opacity:1, x: 0, ease:'ease-in'});
+    TweenMax.fromTo(title, 1, {opacity:0, y: 50}, {opacity:1, y: 0, ease:'ease-in'});
+    TweenMax.fromTo(paragraph, 1, {opacity:0}, {opacity:1, delay: 0.2});
+  },
   components: { faPanel, mobileNav, customMenu }
 }
 </script>

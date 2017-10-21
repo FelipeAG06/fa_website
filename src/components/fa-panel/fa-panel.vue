@@ -47,6 +47,10 @@ export default {
         pages: null
     }
   },
+  mounted() {
+    let panel = $('.custom-fa-panel');
+    TweenMax.fromTo(panel, 1, {opacity:0}, {opacity:1, delay: 0.5});
+  },
   created() {
     this.setupPages();
   },
