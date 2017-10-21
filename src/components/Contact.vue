@@ -8,7 +8,7 @@
           <p class="section-regular-text text-center">
              Revolutionary, fun and challenging projects are my favorites. If you have something to talk about or share please feel free to <span class="section-highlighted-text section-highlighted-italic-text">Get in touch!</span>
           </p>
-          <div class="col-sm-12 col-md-6 col-centered">
+          <div class="col-sm-12 col-md-6 col-centered custom-form">
             <form action="https://formspree.io/felipeag06@gmail.com" method="POST">
               <!-- Name -->
               <div class="form-group">
@@ -54,6 +54,17 @@
       return {
         title: 'C O N T A C T'
       }
+    },
+    mounted() {
+      let title = $('.section-title');
+      let paragraph = $('.section-regular-text');
+      let form = $('.custom-form');
+      let picture = $('.contact-picture-container');
+
+      TweenMax.fromTo(title, 1, {opacity:0, x: 80}, {opacity:1, x:0});
+      TweenMax.fromTo(paragraph, 1, {opacity:0}, {opacity:1, delay:0.2});
+      TweenMax.fromTo(form, 1, {opacity:0, x: -80}, {opacity:1, x:0});
+      TweenMax.fromTo(picture, 1, {opacity:0}, {opacity:1, delay:0.2});
     },
     components: { socialLinks, mobileNav, customMenu }
   }
