@@ -7,7 +7,8 @@
       <!-- Panels -->
       <div class="panel-body custom-fa-panel-body">
         <ul class="page-items-container"
-            v-for="(pageItems, index) in pages" 
+            v-for="(pageItems, index) in pages"
+            v-bind:id="title + '-page-' + index" 
             v-bind:class="{'current-page': index == 0 }">
           <li v-for="item in pageItems" class="custom-fa-panel-items">
               <img v-bind:src="urlParse(item.src)" v-bind:alt="item.name">
@@ -50,6 +51,7 @@ export default {
   mounted() {
     let panel = $('.custom-fa-panel');
     TweenMax.fromTo(panel, 1, {opacity:0}, {opacity:1, delay: 0.5});
+    this.goToPage(0);
   },
   created() {
     this.setupPages();
@@ -69,17 +71,19 @@ export default {
     },
     goToPage: function(idx) {
       const CURRENT_PAGE_CLASS = 'current-page';
-      let page = $("#faPanel[data='"+ this.title + "'] .custom-fa-panel-body ul");
+      let page = $('#' + this.title + '-page-' + idx);
       let buttons = $("#faPanel[data='"+ this.title + "'] .slide-buttons-container .slide-buttons a");
       let selectedItem = $('#' + this.title + '-' + idx);
 
       //Set new Page
       page
-        .eq(idx)
         .addClass(CURRENT_PAGE_CLASS)
         .siblings()
-        .removeClass(CURRENT_PAGE_CLASS);
-      
+        .removeClass(CURRENT_PAGE_CLASS)
+
+      TweenMax.fromTo(page, 0.5, {x: 25, opacity:0}, {x: 0, opacity:1});
+
+      //Set button state
       selectedItem
         .addClass('selected-panel-button')
         .siblings()
@@ -124,7 +128,6 @@ export default {
   list-style: none;
   opacity: 0;
   display: none;
-  transition: all 2s ease-in;
 }
 
 #faPanel[data*=technologies] .custom-fa-panel .custom-fa-panel-body ul{
@@ -136,21 +139,16 @@ export default {
   list-style: none;
   opacity: 0;
   display: none;
-  transition: all 2s ease-in;
 }
 
 #faPanel[data*=companies] .custom-fa-panel .custom-fa-panel-body ul.current-page {
   display: flex;
   justify-content: space-between;
-  opacity: 1;
-  transition: all 2s ease-in;
 }
 
 #faPanel[data*=technologies] .custom-fa-panel .custom-fa-panel-body ul.current-page {
   display: flex;
   justify-content: space-between;
-  opacity: 1;
-  transition: all 2s ease-in;
 }
 
 #faPanel[data*=companies] .custom-fa-panel .slide-buttons-container {
