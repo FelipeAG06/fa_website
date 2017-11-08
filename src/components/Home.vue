@@ -29,6 +29,13 @@
         descriptionTitle: 'Frontend developer and Design enthusiast'
       }
     },
+    mounted() {
+      let nameText = $('.home-text-name');
+      let descriptionText = $('.home-text-description');
+
+      TweenMax.fromTo(nameText, 1, {opacity:0, y: -20}, {opacity:1, y: 0, delay:0.2});
+      TweenMax.fromTo(descriptionText, 1, {opacity:0}, {opacity:1, delay:0.5});
+    },
     components: { socialLinks, mobileNav, customPattern, customMenu }
   }
 </script>

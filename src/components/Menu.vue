@@ -22,6 +22,9 @@ export default {
   },
   mounted() {
     let currentRoute = this.$route.name;
+    let menu = $('#customMenu');
+
+    TweenMax.fromTo(menu, 1.2, {opacity:0}, {opacity:1, delay:0.2});
 
     switch (currentRoute) {
       case 'About':
