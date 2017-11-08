@@ -62,7 +62,7 @@ export default {
           { name : 'gulp', src: 'tech-006.png'},
           { name : 'webpack', src: 'tech-007.png'},
           { name : 'typescript', src: 'tech-008.png'},
-          { name : 'typescript', src: 'tech-009.png'}
+          { name : 'D3', src: 'tech-009.png'}
         ]
       }
     }
