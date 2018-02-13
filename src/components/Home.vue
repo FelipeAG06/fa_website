@@ -10,7 +10,7 @@
     </div>
     <socialLinks></socialLinks>
     <customPattern></customPattern>
-    <customMenu class="hidden-sm hidden-xs"></customMenu>
+    <customMenu class="hidden-sm hidden-md hidden-xs"></customMenu>
   </div>
 </template>
 

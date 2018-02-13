@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="mobileNav" class="mobile-nav-container hidden-lg" v-bind:class="{'menu-closed': isClosed, 'menu-opened': isOpen}">
     <nav class="icon-wrapper">
-      <aside class="col-sm-6 pull-right">
+      <aside class="pull-right">
         <a href="#" class="menu-link" v-on:click="menuToggle">
           <i class="mdi menu-icon" v-bind:class="{'mdi-menu': isClosed, 'mdi-close': isOpen}"></i>
         </a>
@@ -76,6 +76,7 @@ export default {
   }
 
   #mobileNav .icon-wrapper aside{
+    padding: 5px 13px;
     background: rgba(1, 1, 1, 0.5) !important;
   }
 
