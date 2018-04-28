@@ -8,7 +8,7 @@
       <h1 class="section-title about-title">{{title}}</h1>
       <div class="row fill-height">
         <div class="col-sm-12 col-md-10">
-          <p class="section-regular-text">I am a <span class="section-highlighted-text">UX designer</span> and a <span class="section-highlighted-text">front-end developer</span> with +5 years of development
+          <!-- <p class="section-regular-text">I am a <span class="section-highlighted-text">UX designer</span> and a <span class="section-highlighted-text">front-end developer</span> with +5 years of development
           experience in different projects and areas from advertising sites to web
           applications. My commitment to team progress has been recurrently praised
           throught my different job positions, along with my communication
@@ -20,7 +20,15 @@
              eget consectetur lectus iaculis sit amet. Sed suscipit et velit condimentum pellentesque.
              Sed vulputate nisl vitae mauris viverra lobortis. Sed vel nisi nisi. Nunc sodales non lacus vitae hendrerit.
              Aenean consectetur accumsan lectus vitae blandit. Curabitur tincidunt vestibulum odio quis malesuada.
-          </p>
+          </p> -->
+
+          <iframe
+            src="https://tokbox.com/embed/embed/ot-embed.js?embedId=c7bdcf89-0595-4cac-a63b-49e1e2428112&room=DEFAULT_ROOM&iframe=true"
+            width="800px"
+            height="640px"
+            allow="microphone; camera"
+          ></iframe>
+    
           <!-- TODO: TEXT FOR ABOUT SHOULD BE MODIFIED -->
           <div class="row panels-container">
             <faPanel title="companies" v-bind:elements="panelData.companies"></faPanel>
@@ -95,7 +103,7 @@ export default {
   }
 
   #aboutComponent .profile-pic-container .profile-pic{
-    background-image: url('../assets/img/about/profile-temp.png');
+    background-image: url('../assets/img/about/profile.png');
     background-size: cover;
   }
 
